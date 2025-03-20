@@ -466,7 +466,7 @@ class env;
 	virtual task reset_duv();
 		@(wr_drv_if.wr_drv_cb);
 		wr_drv_if.wr_drv_cb.rst <= 1'b1;
-		//@(wr_drv_if.wr_drv_cb);
+		@(wr_drv_if.wr_drv_cb);
 	endtask : reset_duv
 
 	virtual task start();
